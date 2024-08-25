@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "voidbreak",
+	"version": "${version}",
+	"name": "Voidbreak",
+	"description": "Voidbreak Mod created by LotsOfDucks",
+	"authors": [
+		"LotsOfDucks"
+	],
+	"contact": {
+		"homepage": "none atm",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/voidbreak/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.lotsofducks.voidbreak.Voidbreak"
+		],
+		"fabric-datagen": [
+			"com.lotsofducks.voidbreak.VoidbreakDataGenerator"
+		],
+		"client": [
+			"com.lotsofducks.voidbreak.VoidbreakClient"
+		]
+	},
+	"mixins": [
+		"voidbreak.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
