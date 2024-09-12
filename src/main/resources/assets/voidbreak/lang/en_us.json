@@ -1,3 +1,9 @@
 {
-  "item.voidbreak.test_item": "Test Item"
+  "item.voidbreak.test_item": "Test Item",
+
+  "block.voidbreak.bleeding_stone": "Bleeding Stone",
+  "block.voidbreak.bleeding_deepslate": "Bleeding Deepslate",
+
+  "itemgroup.voidbreak.natural_blocks": "VB Natural Blocks",
+  "itemgroup.voidbreak.misc": "VB Misc"
 }

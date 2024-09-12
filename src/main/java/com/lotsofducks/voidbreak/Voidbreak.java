@@ -1,5 +1,7 @@
 package com.lotsofducks.voidbreak;
 
+import com.lotsofducks.voidbreak.block.ModBlocks;
+import com.lotsofducks.voidbreak.item.ModItemGroups;
 import com.lotsofducks.voidbreak.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -12,6 +14,8 @@ public class Voidbreak implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registeritemGroups();
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
