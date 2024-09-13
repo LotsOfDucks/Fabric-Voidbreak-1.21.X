@@ -1,6 +1,8 @@
 package com.lotsofducks.voidbreak.block;
 
 import com.lotsofducks.voidbreak.Voidbreak;
+import com.lotsofducks.voidbreak.block.custom.ChalkySpreadableBlock;
+import com.lotsofducks.voidbreak.item.ModItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -31,6 +33,19 @@ public class ModBlocks {
                     .requiresTool()
                     .strength(2.5F, 4.0F)));
 
+    public static final Block CHALKY_DIRT = registerBlock("chalky_dirt",
+            new Block(AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.GRAVEL)
+                    .mapColor(MapColor.WHITE_GRAY)
+                    .strength(0.5F)));
+
+    public static final Block CHALKY_GRASS = registerBlock("chalky_grass",
+            new ChalkySpreadableBlock(AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .mapColor(MapColor.PALE_YELLOW)
+                    .strength(0.6F)
+                    .ticksRandomly()));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Voidbreak.MOD_ID, name), block);
@@ -45,8 +60,7 @@ public class ModBlocks {
         Voidbreak.LOGGER.info("Registering Mod Blocks for " + Voidbreak.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
-            entries.add(ModBlocks.BLEEDING_STONE);
-            entries.add(ModBlocks.BLEEDING_DEEPSLATE);
+            entries.add(ModItems.TEST_ITEM);
         });
     }
 }

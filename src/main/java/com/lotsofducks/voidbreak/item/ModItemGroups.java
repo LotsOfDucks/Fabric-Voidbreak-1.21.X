@@ -24,11 +24,13 @@ public class ModItemGroups {
     public static final ItemGroup VOIDBREAK_NATURAL_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Voidbreak.MOD_ID, "voidbreak_natural_blocks"),
             FabricItemGroup.builder()
-                    .icon(() -> new ItemStack(ModBlocks.BLEEDING_STONE))
+                    .icon(() -> new ItemStack(ModBlocks.CHALKY_GRASS))
                     .displayName(Text.translatable("itemgroup.voidbreak.natural_blocks"))
                     .entries((displayContext, entries) -> {
                       entries.add(ModBlocks.BLEEDING_STONE);
                       entries.add(ModBlocks.BLEEDING_DEEPSLATE);
+                      entries.add(ModBlocks.CHALKY_DIRT);
+                      entries.add(ModBlocks.CHALKY_GRASS);
                     }).build());
 
 
