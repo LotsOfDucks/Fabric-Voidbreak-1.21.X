@@ -1,10 +1,12 @@
 {
   "item.voidbreak.test_item": "Test Item",
 
+  "block.voidbreak.gneiss": "Gneiss",
   "block.voidbreak.bleeding_stone": "Bleeding Stone",
   "block.voidbreak.bleeding_deepslate": "Bleeding Deepslate",
   "block.voidbreak.chalky_dirt": "Chalky Dirt",
   "block.voidbreak.chalky_grass": "Chalky Grass",
+  "block.voidbreak.chalky_brush": "Chalky Brush",
 
   "itemgroup.voidbreak.natural_blocks": "VB Natural Blocks",
   "itemgroup.voidbreak.misc": "VB Misc"

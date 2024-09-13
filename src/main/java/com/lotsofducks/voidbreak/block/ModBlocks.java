@@ -1,13 +1,15 @@
 package com.lotsofducks.voidbreak.block;
 
 import com.lotsofducks.voidbreak.Voidbreak;
-import com.lotsofducks.voidbreak.block.custom.ChalkySpreadableBlock;
+import com.lotsofducks.voidbreak.block.custom.ChalkyGrassBlock;
 import com.lotsofducks.voidbreak.item.ModItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
+import net.minecraft.block.ShortPlantBlock;
 import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -17,6 +19,14 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
+    public static final Block GNEISS = registerBlock("gneiss",
+            new Block(AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.STONE)
+                    .mapColor(MapColor.BLACK)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 7.0F)));
+
     public static final Block BLEEDING_STONE = registerBlock("bleeding_stone",
             new Block(AbstractBlock.Settings.create()
                     .sounds(BlockSoundGroup.STONE)
@@ -40,11 +50,23 @@ public class ModBlocks {
                     .strength(0.5F)));
 
     public static final Block CHALKY_GRASS = registerBlock("chalky_grass",
-            new ChalkySpreadableBlock(AbstractBlock.Settings.create()
+            new ChalkyGrassBlock(AbstractBlock.Settings.create()
                     .sounds(BlockSoundGroup.GRASS)
                     .mapColor(MapColor.PALE_YELLOW)
                     .strength(0.6F)
                     .ticksRandomly()));
+
+    public static final Block CHALKY_BRUSH = registerBlock("chalky_brush",
+            new ShortPlantBlock(AbstractBlock.Settings.create()
+                    .nonOpaque()
+                    .mapColor(MapColor.PALE_YELLOW)
+                    .replaceable()
+                    .noCollision()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .offset(AbstractBlock.OffsetType.XYZ)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

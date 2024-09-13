@@ -27,10 +27,12 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModBlocks.CHALKY_GRASS))
                     .displayName(Text.translatable("itemgroup.voidbreak.natural_blocks"))
                     .entries((displayContext, entries) -> {
-                      entries.add(ModBlocks.BLEEDING_STONE);
-                      entries.add(ModBlocks.BLEEDING_DEEPSLATE);
-                      entries.add(ModBlocks.CHALKY_DIRT);
-                      entries.add(ModBlocks.CHALKY_GRASS);
+                        entries.add(ModBlocks.GNEISS);
+                        entries.add(ModBlocks.BLEEDING_STONE);
+                        entries.add(ModBlocks.BLEEDING_DEEPSLATE);
+                        entries.add(ModBlocks.CHALKY_DIRT);
+                        entries.add(ModBlocks.CHALKY_GRASS);
+                        entries.add(ModBlocks.CHALKY_BRUSH);
                     }).build());
 
 
