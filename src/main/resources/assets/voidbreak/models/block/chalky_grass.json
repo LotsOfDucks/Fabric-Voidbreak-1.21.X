@@ -2,8 +2,8 @@
   "textures": {
     "particle": "voidbreak:block/chalky_dirt",
     "bottom": "voidbreak:block/chalky_dirt",
-    "top": "voidbreak:block/bleeding_deepslate",
-    "side": "voidbreak:block/bleeding_stone"
+    "top": "voidbreak:block/chalky_grass_block_top",
+    "side": "voidbreak:block/chalky_grass_block_side"
   },
   "elements": [
     {   "from": [ 0, 0, 0 ],
