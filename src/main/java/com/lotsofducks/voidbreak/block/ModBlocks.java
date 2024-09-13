@@ -25,7 +25,7 @@ public class ModBlocks {
                     .mapColor(MapColor.BLACK)
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresTool()
-                    .strength(3.0F, 7.0F)));
+                    .strength(3.0F, 6.5F)));
 
     public static final Block BLEEDING_STONE = registerBlock("bleeding_stone",
             new Block(AbstractBlock.Settings.create()
@@ -33,7 +33,7 @@ public class ModBlocks {
                     .mapColor(MapColor.STONE_GRAY)
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresTool()
-                    .strength(1.0F, 4.0F)));
+                    .strength(1.0F, 3.0F)));
 
     public static final Block BLEEDING_DEEPSLATE = registerBlock("bleeding_deepslate",
             new Block(AbstractBlock.Settings.create()
@@ -41,7 +41,7 @@ public class ModBlocks {
                     .mapColor(MapColor.DEEPSLATE_GRAY)
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresTool()
-                    .strength(2.5F, 4.0F)));
+                    .strength(3.5F, 3.0F)));
 
     public static final Block CHALKY_DIRT = registerBlock("chalky_dirt",
             new Block(AbstractBlock.Settings.create()
