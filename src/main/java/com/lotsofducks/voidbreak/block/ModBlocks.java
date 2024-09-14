@@ -89,6 +89,7 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
             entries.add(ModItems.TEST_ITEM);
+            entries.add(ModItems.VOID_ROOT_SPROUT);
         });
     }
 }
