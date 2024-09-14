@@ -33,6 +33,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CHALKY_DIRT);
                         entries.add(ModBlocks.CHALKY_GRASS);
                         entries.add(ModBlocks.CHALKY_BRUSH);
+                        entries.add(ModItems.VOID_ROOT_SPROUT);
                     }).build());
 
 

@@ -1,13 +1,11 @@
 package com.lotsofducks.voidbreak.block;
 
 import com.lotsofducks.voidbreak.Voidbreak;
+import com.lotsofducks.voidbreak.block.custom.CeilingCropBlock;
 import com.lotsofducks.voidbreak.block.custom.ChalkyGrassBlock;
 import com.lotsofducks.voidbreak.item.ModItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.MapColor;
-import net.minecraft.block.ShortPlantBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
@@ -58,7 +56,6 @@ public class ModBlocks {
 
     public static final Block CHALKY_BRUSH = registerBlock("chalky_brush",
             new ShortPlantBlock(AbstractBlock.Settings.create()
-                    .nonOpaque()
                     .mapColor(MapColor.PALE_YELLOW)
                     .replaceable()
                     .noCollision()
@@ -66,6 +63,15 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.GRASS)
                     .offset(AbstractBlock.OffsetType.XYZ)
                     .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block VOID_ROOT = registerBlock("void_root",
+            new CeilingCropBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .noCollision()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.CROP)
                     .pistonBehavior(PistonBehavior.DESTROY)));
 
     private static Block registerBlock(String name, Block block) {
