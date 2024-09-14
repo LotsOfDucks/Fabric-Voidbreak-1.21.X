@@ -1,6 +1,8 @@
 package com.lotsofducks.voidbreak.block;
 
 import com.lotsofducks.voidbreak.Voidbreak;
+import com.lotsofducks.voidbreak.block.custom.BleedingBlock;
+import com.lotsofducks.voidbreak.block.custom.BleedingDeepslateBlock;
 import com.lotsofducks.voidbreak.block.custom.CeilingCropBlock;
 import com.lotsofducks.voidbreak.block.custom.ChalkyGrassBlock;
 import com.lotsofducks.voidbreak.item.ModItems;
@@ -26,7 +28,7 @@ public class ModBlocks {
                     .strength(3.0F, 6.5F)));
 
     public static final Block BLEEDING_STONE = registerBlock("bleeding_stone",
-            new Block(AbstractBlock.Settings.create()
+            new BleedingBlock(AbstractBlock.Settings.create()
                     .sounds(BlockSoundGroup.STONE)
                     .mapColor(MapColor.STONE_GRAY)
                     .instrument(NoteBlockInstrument.BASEDRUM)
@@ -34,7 +36,7 @@ public class ModBlocks {
                     .strength(1.0F, 3.0F)));
 
     public static final Block BLEEDING_DEEPSLATE = registerBlock("bleeding_deepslate",
-            new Block(AbstractBlock.Settings.create()
+            new BleedingDeepslateBlock(AbstractBlock.Settings.create()
                     .sounds(BlockSoundGroup.DEEPSLATE)
                     .mapColor(MapColor.DEEPSLATE_GRAY)
                     .instrument(NoteBlockInstrument.BASEDRUM)
