@@ -1,8 +1,10 @@
 {
   "item.voidbreak.test_item": "Test Item",
   "item.voidbreak.voidroot_sprout": "Voidroot Sprout",
+  "item.voidbreak.chalk_dust": "Chalk Dust",
 
   "block.voidbreak.gneiss": "Gneiss",
+  "block.voidbreak.chalk": "Chalk",
   "block.voidbreak.bleeding_stone": "Bleeding Stone",
   "block.voidbreak.bleeding_deepslate": "Bleeding Deepslate",
   "block.voidbreak.chalky_dirt": "Chalky Dirt",

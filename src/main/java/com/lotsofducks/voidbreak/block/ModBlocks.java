@@ -27,6 +27,14 @@ public class ModBlocks {
                     .requiresTool()
                     .strength(3.0F, 6.5F)));
 
+    public static final Block CHALK = registerBlock("chalk",
+            new Block(AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.CALCITE)
+                    .mapColor(MapColor.OFF_WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.0F, 2.5F)));
+
     public static final Block BLEEDING_STONE = registerBlock("bleeding_stone",
             new BleedingBlock(AbstractBlock.Settings.create()
                     .sounds(BlockSoundGroup.STONE)
@@ -91,7 +99,6 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
             entries.add(ModItems.TEST_ITEM);
-            entries.add(ModItems.VOIDROOT_SPROUT);
         });
     }
 }

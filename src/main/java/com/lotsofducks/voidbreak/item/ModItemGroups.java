@@ -28,6 +28,7 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.voidbreak.natural_blocks"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.GNEISS);
+                        entries.add(ModBlocks.CHALK);
                         entries.add(ModBlocks.BLEEDING_STONE);
                         entries.add(ModBlocks.BLEEDING_DEEPSLATE);
                         entries.add(ModBlocks.CHALKY_DIRT);
