@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_up",
+  "textures": {
+    "texture": "voidbreak:block/lumen_pressure_plate_blue"
+  }
+}
