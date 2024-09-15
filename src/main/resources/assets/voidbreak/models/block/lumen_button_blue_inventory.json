@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "voidbreak:block/lumenwood_planks_blue"
+  }
+}

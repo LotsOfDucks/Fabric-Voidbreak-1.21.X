@@ -19,6 +19,8 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.voidbreak.misc"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.TEST_ITEM);
+                        entries.add(ModItems.LUMEN_SIGN_BLUE);
+                        entries.add(ModItems.LUMEN_HANGING_SIGN_BLUE);
                     }).build());
 
     public static final ItemGroup VOIDBREAK_NATURAL_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,

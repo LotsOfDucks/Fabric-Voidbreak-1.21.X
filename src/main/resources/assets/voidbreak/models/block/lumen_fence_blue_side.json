@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "voidbreak:block/lumenwood_planks_blue"
+  }
+}
