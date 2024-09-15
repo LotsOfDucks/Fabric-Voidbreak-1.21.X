@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item TEST_ITEM = registerItem("test_item", new Item(new Item.Settings()));
-    public static final Item VOID_ROOT_SPROUT = registerItem("void_root_sprout", new AliasedBlockItem(ModBlocks.VOID_ROOT, new Item.Settings()));
+    public static final Item VOIDROOT_SPROUT = registerItem("voidroot_sprout", new AliasedBlockItem(ModBlocks.VOIDROOT, new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {
@@ -25,7 +25,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
            entries.add(TEST_ITEM);
-           entries.add(VOID_ROOT_SPROUT);
+           entries.add(VOIDROOT_SPROUT);
         });
     }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "voidbreak:block/ceiling_crop",
   "textures": {
-    "crop": "voidbreak:block/void_root5"
+    "crop": "voidbreak:block/voidroot5"
   }
 }

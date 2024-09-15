@@ -67,7 +67,7 @@ public class ModBlocks {
                     .burnable()
                     .pistonBehavior(PistonBehavior.DESTROY)));
 
-    public static final Block VOID_ROOT = registerBlock("void_root",
+    public static final Block VOIDROOT = registerBlock("voidroot",
             new CeilingCropBlock(AbstractBlock.Settings.create()
                     .mapColor(MapColor.DARK_GREEN)
                     .noCollision()
@@ -91,7 +91,7 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
             entries.add(ModItems.TEST_ITEM);
-            entries.add(ModItems.VOID_ROOT_SPROUT);
+            entries.add(ModItems.VOIDROOT_SPROUT);
         });
     }
 }

@@ -117,7 +117,7 @@ public class CeilingCropBlock extends CropBlock {
 
     @Override
     protected ItemConvertible getSeedsItem() {
-        return ModItems.VOID_ROOT_SPROUT;
+        return ModItems.VOIDROOT_SPROUT;
     }
 
     @Override
