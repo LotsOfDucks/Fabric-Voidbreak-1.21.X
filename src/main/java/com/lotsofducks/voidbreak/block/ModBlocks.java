@@ -17,6 +17,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
 import java.util.function.ToIntFunction;
 
@@ -77,11 +78,23 @@ public class ModBlocks {
                     .burnable()
                     .pistonBehavior(PistonBehavior.DESTROY)));
 
+    public static Block createModLogBlock(MapColor topMapColor, MapColor sideMapColor, Integer integer) {
+        return new PillarBlock(AbstractBlock.Settings.create().mapColor((state) -> {
+            return state.get(PillarBlock.AXIS) == Direction.Axis.Y ? topMapColor : sideMapColor;})
+                .instrument(NoteBlockInstrument.BASS)
+                .strength(2.0F)
+                .sounds(BlockSoundGroup.WOOD)
+                .burnable()
+                .luminance((state) -> {
+                    return integer;
+                }));
+    }
+
     public static final Block LUMEN_LOG_BLUE = registerBlock("lumen_log_blue",
-            Blocks.createLogBlock(MapColor.BLUE, MapColor.LIGHT_GRAY));
+            ModBlocks.createModLogBlock(MapColor.BLUE, MapColor.LIGHT_GRAY, 3));
 
     public static final Block STRIPPED_LUMEN_LOG_BLUE = registerBlock("stripped_lumen_log_blue",
-            Blocks.createLogBlock(MapColor.BLUE, MapColor.LIGHT_BLUE));
+            ModBlocks.createModLogBlock(MapColor.BLUE, MapColor.LIGHT_BLUE, 10));
 
     public static final Block LUMEN_WOOD_BLUE = registerBlock("lumen_wood_blue",
             new PillarBlock(AbstractBlock.Settings.create()
