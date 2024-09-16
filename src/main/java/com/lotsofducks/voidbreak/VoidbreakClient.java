@@ -10,8 +10,9 @@ import net.minecraft.registry.Registry;
 
 public class VoidbreakClient implements ClientModInitializer {
     @Override
+    //Blocks
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.CHALKY_BRUSH);
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.VOIDROOT);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.CHALKY_BRUSH, ModBlocks.VOIDROOT,
+                ModBlocks.LUMEN_DOOR_BLUE, ModBlocks.LUMEN_SAPLING_BLUE, ModBlocks.LUMEN_LEAVES_BLUE, ModBlocks.LUMEN_TRAPDOOR_BLUE);
     }
 }
