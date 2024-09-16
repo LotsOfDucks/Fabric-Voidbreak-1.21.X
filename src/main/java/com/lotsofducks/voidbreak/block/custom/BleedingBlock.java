@@ -1,5 +1,6 @@
 package com.lotsofducks.voidbreak.block.custom;
 
+import com.lotsofducks.voidbreak.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -30,9 +31,9 @@ public class BleedingBlock extends Block {
             world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
             world.setBlockState(pos, Blocks.STONE.getDefaultState() );
             if (stack.isEmpty()) {
-                player.setStackInHand(hand, new ItemStack(Items.HONEY_BOTTLE));
-            } else if (!player.getInventory().insertStack(new ItemStack(Items.HONEY_BOTTLE))) {
-                player.dropItem(new ItemStack(Items.HONEY_BOTTLE), false);
+                player.setStackInHand(hand, new ItemStack(ModItems.VOID_BOTTLE));
+            } else if (!player.getInventory().insertStack(new ItemStack(ModItems.VOID_BOTTLE))) {
+                player.dropItem(new ItemStack(ModItems.VOID_BOTTLE), false);
             }
 
             bl = true;
