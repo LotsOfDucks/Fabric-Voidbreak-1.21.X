@@ -44,7 +44,10 @@ public class ModBlocks {
                     .mapColor(MapColor.STONE_GRAY)
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresTool()
-                    .strength(1.0F, 3.0F)));
+                    .strength(1.0F, 3.0F)
+                    .luminance((state) -> {
+                        return 3;
+                    })));
 
     public static final Block BLEEDING_DEEPSLATE = registerBlock("bleeding_deepslate",
             new BleedingDeepslateBlock(AbstractBlock.Settings.create()
@@ -52,7 +55,10 @@ public class ModBlocks {
                     .mapColor(MapColor.DEEPSLATE_GRAY)
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresTool()
-                    .strength(3.5F, 3.0F)));
+                    .strength(3.5F, 3.0F)
+                    .luminance((state) -> {
+                        return 6;
+                    })));
 
     public static final Block CHALKY_DIRT = registerBlock("chalky_dirt",
             new Block(AbstractBlock.Settings.create()
@@ -298,9 +304,7 @@ public class ModBlocks {
                     .breakInstantly()
                     .sounds(BlockSoundGroup.CROP)
                     .pistonBehavior(PistonBehavior.DESTROY)
-                    .luminance((state) -> {
-                        return 2;
-                    })));
+                    ));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

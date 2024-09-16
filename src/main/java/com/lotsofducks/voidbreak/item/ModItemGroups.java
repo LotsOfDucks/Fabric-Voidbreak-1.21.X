@@ -36,6 +36,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CHALKY_DIRT);
                         entries.add(ModBlocks.CHALKY_GRASS);
                         entries.add(ModBlocks.CHALKY_BRUSH);
+                        entries.add(ModBlocks.LUMEN_LOG_BLUE);
+                        entries.add(ModBlocks.STRIPPED_LUMEN_LOG_BLUE);
+                        entries.add(ModBlocks.LUMEN_WOOD_BLUE);
+                        entries.add(ModBlocks.STRIPPED_LUMEN_WOOD_BLUE);
+                        entries.add(ModBlocks.LUMEN_LEAVES_BLUE);
                         entries.add(ModItems.VOIDROOT_SPROUT);
                     }).build());
 
