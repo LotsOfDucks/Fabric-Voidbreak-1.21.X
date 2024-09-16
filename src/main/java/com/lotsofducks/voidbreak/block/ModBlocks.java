@@ -136,7 +136,7 @@ public class ModBlocks {
                     })));
 
     public static final Block LUMEN_SAPLING_BLUE = registerBlock("lumen_sapling_blue",
-            new SaplingBlock(null, AbstractBlock.Settings.create()
+            new SaplingBlock(SaplingGenerator.OAK, AbstractBlock.Settings.create()
                     .mapColor(MapColor.BLUE)
                     .ticksRandomly()
                     .strength(0.0F)

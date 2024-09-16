@@ -13,5 +13,9 @@ public class ModTags {
 
     }
 
-    public static final TagKey<Item> LUMEN_LOGS_BLUE = TagKey.of(RegistryKeys.ITEM, Identifier.of("voidbreak:lumen_logs_blue"));
+    public static class Items {
+
+        public static final TagKey<Item> LUMEN_LOGS_BLUE = TagKey.of(RegistryKeys.ITEM, Identifier.of("voidbreak:lumen_logs_blue"));
+
+    }
 }
