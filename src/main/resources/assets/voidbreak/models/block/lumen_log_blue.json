@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cube_column",
   "textures": {
     "end": "voidbreak:block/lumen_log_blue_top",
-    "side": "voidbreak:block/lumen_log_blue"
+    "side": "voidbreak:block/lumen_log"
   }
 }
