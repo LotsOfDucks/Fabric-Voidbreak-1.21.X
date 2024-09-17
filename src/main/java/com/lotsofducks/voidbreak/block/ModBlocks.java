@@ -79,15 +79,27 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY)));
 
     public static Block createModLogBlock(MapColor topMapColor, MapColor sideMapColor, Integer integer) {
-        return new PillarBlock(AbstractBlock.Settings.create().mapColor((state) -> {
-            return state.get(PillarBlock.AXIS) == Direction.Axis.Y ? topMapColor : sideMapColor;})
+        return new PillarBlock(AbstractBlock.Settings.create().mapColor((state) -> state.get(PillarBlock.AXIS) == Direction.Axis.Y ? topMapColor : sideMapColor)
                 .instrument(NoteBlockInstrument.BASS)
                 .strength(2.0F)
                 .sounds(BlockSoundGroup.WOOD)
                 .burnable()
-                .luminance((state) -> {
-                    return integer;
-                }));
+                .luminance((state) -> integer));
+    }
+
+    public static Block createModLeavesBlock(BlockSoundGroup soundGroup,MapColor mapColor, Integer integer) {
+        return new LeavesBlock(AbstractBlock.Settings.create()
+                .strength(0.2F)
+                .ticksRandomly()
+                .sounds(soundGroup)
+                .nonOpaque()
+                .allowsSpawning(Blocks::canSpawnOnLeaves)
+                .suffocates(Blocks::never)
+                .blockVision(Blocks::never)
+                .burnable()
+                .pistonBehavior(PistonBehavior.DESTROY)
+                .solidBlock(Blocks::never)
+                .luminance((state) -> integer));
     }
 
     public static final Block LUMEN_LOG_BLUE = registerBlock("lumen_log_blue",
@@ -103,9 +115,7 @@ public class ModBlocks {
                     .strength(2.0F)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable()
-                    .luminance((state) -> {
-                        return 3;
-                    })));
+                    .luminance((state) -> 3)));
 
     public static final Block STRIPPED_LUMEN_WOOD_BLUE = registerBlock("stripped_lumen_wood_blue",
             new PillarBlock(AbstractBlock.Settings.create()
@@ -114,26 +124,10 @@ public class ModBlocks {
                     .strength(2.0F)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable()
-                    .luminance((state) -> {
-                        return 10;
-                    })));
+                    .luminance((state) -> 10)));
 
     public static final Block LUMEN_LEAVES_BLUE = registerBlock("lumen_leaves_blue",
-            new LeavesBlock(AbstractBlock.Settings.create()
-                    .mapColor(MapColor.BLUE)
-                    .strength(0.2F)
-                    .ticksRandomly()
-                    .sounds(BlockSoundGroup.GRASS)
-                    .nonOpaque()
-                    .allowsSpawning(Blocks::canSpawnOnLeaves)
-                    .suffocates(Blocks::never)
-                    .blockVision(Blocks::never)
-                    .burnable()
-                    .pistonBehavior(PistonBehavior.DESTROY)
-                    .solidBlock(Blocks::never)
-                    .luminance((state) -> {
-                        return 13;
-                    })));
+            ModBlocks.createModLeavesBlock(BlockSoundGroup.GRASS,MapColor.LIGHT_BLUE, 13));
 
     public static final Block LUMEN_SAPLING_BLUE = registerBlock("lumen_sapling_blue",
             new SaplingBlock(SaplingGenerator.OAK, AbstractBlock.Settings.create()
@@ -148,16 +142,12 @@ public class ModBlocks {
                     .burnable()
                     .pistonBehavior(PistonBehavior.DESTROY)
                     .solidBlock(Blocks::never)
-                    .luminance((state) -> {
-                        return 6;
-                    })));
+                    .luminance((state) -> 6)));
 
     public static final Block LUMEN_PLANKS_BLUE = registerBlock("lumen_planks_blue",
             new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)
                     .mapColor(MapColor.BLUE)
-                    .luminance((state) -> {
-                        return 10;
-                    })));
+                    .luminance((state) -> 10)));
 
     public static final Block LUMEN_DOOR_BLUE = registerBlock("lumen_door_blue",
             new DoorBlock(ModBlockSetTypes.LUMEN_BLUE, AbstractBlock.Settings.create()
@@ -167,9 +157,7 @@ public class ModBlocks {
                     .nonOpaque()
                     .burnable()
                     .pistonBehavior(PistonBehavior.DESTROY)
-                    .luminance((state) -> {
-                        return 10;
-                    })));
+                    .luminance((state) -> 10)));
 
     public static final Block LUMEN_FENCE_BLUE = registerBlock("lumen_fence_blue",
             new FenceBlock(AbstractBlock.Settings.create()
@@ -178,9 +166,7 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.BASS)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable()
-                    .luminance((state) -> {
-                        return 10;
-                    })));
+                    .luminance((state) -> 10)));
 
     public static final Block LUMEN_FENCE_GATE_BLUE = registerBlock("lumen_fence_gate_blue",
             new FenceGateBlock(ModWoodTypes.LUMEN_BLUE, AbstractBlock.Settings.create()
@@ -188,9 +174,7 @@ public class ModBlocks {
                     .strength(3.0F)
                     .instrument(NoteBlockInstrument.BASS)
                     .burnable()
-                    .luminance((state) -> {
-                        return 10;
-                    })));
+                    .luminance((state) -> 10)));
 
     public static final Block LUMEN_STAIRS_BLUE = registerBlock("lumen_stairs_blue",
             new StairsBlock(LUMEN_PLANKS_BLUE.getDefaultState(), AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)
@@ -206,9 +190,7 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.BASS)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable()
-                    .luminance((state) -> {
-                        return 10;
-                    })));
+                    .luminance((state) -> 10)));
 
     public static final Block LUMEN_PRESSURE_PLATE_BLUE = registerBlock("lumen_pressure_plate_blue",
             new PressurePlateBlock(ModBlockSetTypes.LUMEN_BLUE, AbstractBlock.Settings.create()
@@ -219,9 +201,7 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.BASS)
                     .burnable()
                     .pistonBehavior(PistonBehavior.DESTROY)
-                    .luminance((state) -> {
-                        return 10;
-                    })));
+                    .luminance((state) -> 10)));
 
     public static final Block LUMEN_BUTTON_BLUE = registerBlock("lumen_pressure_plate_blue",
             Blocks.createWoodenButtonBlock(ModBlockSetTypes.LUMEN_BLUE));
@@ -234,9 +214,7 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.BASS)
                     .burnable()
                     .allowsSpawning(Blocks::never)
-                    .luminance((state) -> {
-                        return 10;
-                    })));
+                    .luminance((state) -> 10)));
 
     public static final Block LUMEN_SIGN_BLUE = registerBlock("lumen_sign_blue",
             new SignBlock(WoodType.OAK, AbstractBlock.Settings.create()
@@ -246,9 +224,7 @@ public class ModBlocks {
                     .noCollision()
                     .strength(1.0F)
                     .burnable()
-                    .luminance((state) -> {
-                        return 10;
-                    })));
+                    .luminance((state) -> 10)));
 
     public static final Block LUMEN_WALL_SIGN_BLUE = registerBlock("lumen_wall_sign_blue",
             new WallSignBlock(ModWoodTypes.LUMEN_BLUE, AbstractBlock.Settings.create()
@@ -259,9 +235,7 @@ public class ModBlocks {
                     .strength(1.0F)
                     .dropsLike(LUMEN_SIGN_BLUE)
                     .burnable()
-                    .luminance((state) -> {
-                        return 10;
-                    })));
+                    .luminance((state) -> 10)));
 
     public static final Block LUMEN_HANGING_SIGN_BLUE = registerBlock("lumen_hanging_sign_blue",
             new HangingSignBlock(ModWoodTypes.LUMEN_BLUE, AbstractBlock.Settings.create()
@@ -272,9 +246,7 @@ public class ModBlocks {
                     .strength(1.0F)
                     .dropsLike(LUMEN_SIGN_BLUE)
                     .burnable()
-                    .luminance((state) -> {
-                        return 10;
-                    })));
+                    .luminance((state) -> 10)));
 
     public static final Block LUMEN_WALL_HANGING_SIGN_BLUE = registerBlock("lumen_wall_hanging_sign_blue",
             new WallHangingSignBlock(ModWoodTypes.LUMEN_BLUE, AbstractBlock.Settings.create()
@@ -285,9 +257,7 @@ public class ModBlocks {
                     .strength(1.0F)
                     .dropsLike(LUMEN_SIGN_BLUE)
                     .burnable()
-                    .luminance((state) -> {
-                        return 10;
-                    })));
+                    .luminance((state) -> 10)));
 
     public static final Block VOIDROOT = registerBlock("voidroot",
             new CeilingCropBlock(AbstractBlock.Settings.create()

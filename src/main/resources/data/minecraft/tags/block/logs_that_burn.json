@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "#voidbreak:lumen_logs_blue"
+    "voidbreak:lumen_log_blue",
+    "voidbreak:stripped_lumen_log_blue",
+    "voidbreak:lumen_wood_blue",
+    "voidbreak:stripped_lumen_wood_blue"
   ]
 }
