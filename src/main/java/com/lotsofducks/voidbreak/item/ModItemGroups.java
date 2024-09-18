@@ -51,6 +51,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.LUMEN_DOOR_BLUE);
                         entries.add(ModBlocks.LUMEN_TRAPDOOR_BLUE);
                         entries.add(ModItems.VOIDROOT_SPROUT);
+                        entries.add(ModItems.LUMEI_BUD);
+                        entries.add(ModBlocks.LUMEI_MELON);
                     }).build());
 
 

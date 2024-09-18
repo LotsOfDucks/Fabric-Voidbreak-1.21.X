@@ -13,6 +13,7 @@ public class VoidbreakClient implements ClientModInitializer {
     //Blocks
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.CHALKY_BRUSH, ModBlocks.VOIDROOT,
-                ModBlocks.LUMEN_DOOR_BLUE, ModBlocks.LUMEN_SAPLING_BLUE, ModBlocks.LUMEN_LEAVES_BLUE, ModBlocks.LUMEN_TRAPDOOR_BLUE);
+                ModBlocks.LUMEN_DOOR_BLUE, ModBlocks.LUMEN_SAPLING_BLUE, ModBlocks.LUMEN_LEAVES_BLUE, ModBlocks.LUMEN_TRAPDOOR_BLUE,
+                ModBlocks.LUMEI_STEM, ModBlocks.LUMEI_FRUIT);
     }
 }

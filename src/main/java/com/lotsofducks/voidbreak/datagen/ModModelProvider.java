@@ -51,5 +51,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CHALK_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.VOID_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.VOIDROOT_SPROUT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LUMEI_BUD, Models.GENERATED);
     }
 }

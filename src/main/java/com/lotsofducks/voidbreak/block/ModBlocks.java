@@ -223,6 +223,35 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY)
                     ));
 
+    public static final Block LUMEI_STEM = registerBlock("lumei_stem",
+            new CeilingStemBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .nonOpaque()
+                    .noCollision()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+            ));
+
+    public static final Block LUMEI_FRUIT = registerBlock("lumei_fruit",
+            new HangingMelonBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.WOOD)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .luminance((state) -> 10)
+            ));
+
+    public static final Block LUMEI_MELON = registerBlock("lumei_melon",
+            new Block(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .luminance((state) -> 10)
+            ));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Voidbreak.MOD_ID, name), block);

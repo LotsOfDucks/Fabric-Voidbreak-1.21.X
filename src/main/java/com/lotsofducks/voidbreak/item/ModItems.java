@@ -11,6 +11,7 @@ import net.minecraft.util.Identifier;
 public class ModItems {
     public static final Item TEST_ITEM = registerItem("test_item", new Item(new Item.Settings()));
     public static final Item VOIDROOT_SPROUT = registerItem("voidroot_sprout", new AliasedBlockItem(ModBlocks.VOIDROOT, new Item.Settings()));
+    public static final Item LUMEI_BUD = registerItem("lumei_bud", new AliasedBlockItem(ModBlocks.LUMEI_STEM, new Item.Settings()));
     public static final Item VOID_BOTTLE = registerItem("void_bottle", new Item(new Item.Settings().maxCount(16)));
     public static final Item CHALK_DUST = registerItem("chalk_dust", new Item(new Item.Settings()));
 
