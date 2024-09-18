@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "voidbreak:block/lumen_planks_blue",
-    "side": "voidbreak:block/lumen_planks_blue",
-    "top": "voidbreak:block/lumen_planks_blue"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/button_pressed",
-  "textures": {
-    "texture": "voidbreak:block/lumenwood_planks_blue"
-  }
-}

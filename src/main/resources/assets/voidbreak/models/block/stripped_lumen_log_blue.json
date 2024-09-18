@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "voidbreak:block/stripped_lumen_log_blue_top",
-    "side": "voidbreak:block/stripped_lumen_log_blue"
-  }
-}

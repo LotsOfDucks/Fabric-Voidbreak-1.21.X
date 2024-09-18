@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "voidbreak:block/lumen_planks_blue"
-  }
-}
