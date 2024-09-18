@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "voidbreak:block/lumen_wood_blue",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "voidbreak:block/lumen_wood_blue"
+    },
+    "axis=z": {
+      "model": "voidbreak:block/lumen_wood_blue",
+      "x": 90
+    }
+  }
+}

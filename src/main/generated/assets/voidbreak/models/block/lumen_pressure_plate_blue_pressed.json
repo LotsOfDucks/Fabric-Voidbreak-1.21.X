@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "voidbreak:block/lumen_planks_blue"
+  }
+}

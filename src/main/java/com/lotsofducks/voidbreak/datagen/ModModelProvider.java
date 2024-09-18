@@ -33,7 +33,6 @@ public class ModModelProvider extends FabricModelProvider {
                 .button(ModBlocks.LUMEN_BUTTON_BLUE)
                 .fence(ModBlocks.LUMEN_FENCE_BLUE)
                 .fenceGate(ModBlocks.LUMEN_FENCE_GATE_BLUE)
-                .pressurePlate(ModBlocks.LUMEN_PRESSURE_PLATE_BLUE)
                 .sign(ModBlocks.LUMEN_SIGN_BLUE, ModBlocks.LUMEN_WALL_SIGN_BLUE)
                 .slab(ModBlocks.LUMEN_SLAB_BLUE)
                 .stairs(ModBlocks.LUMEN_STAIRS_BLUE)
@@ -49,7 +48,6 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.CHALK_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.TEST_ITEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHALK_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.VOID_BOTTLE, Models.GENERATED);

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "voidbreak:block/lumen_slab_blue"
+    },
+    "type=double": {
+      "model": "voidbreak:block/lumen_planks_blue"
+    },
+    "type=top": {
+      "model": "voidbreak:block/lumen_slab_blue_top"
+    }
+  }
+}
