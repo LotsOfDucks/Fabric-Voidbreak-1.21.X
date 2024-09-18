@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "voidbreak:lumen_logs_blue"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "voidbreak:lumen_planks_blue"
+  }
+}

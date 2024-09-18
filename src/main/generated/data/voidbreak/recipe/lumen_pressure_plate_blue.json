@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "T": {
+      "item": "voidbreak:lumen_planks_blue"
+    }
+  },
+  "pattern": [
+    "TT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "voidbreak:lumen_pressure_plate_blue"
+  }
+}

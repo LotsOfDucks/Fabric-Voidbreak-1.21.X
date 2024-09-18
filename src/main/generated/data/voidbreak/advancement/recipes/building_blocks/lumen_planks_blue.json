@@ -1,0 +1,65 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lumen_log_blue": {
+      "conditions": {
+        "items": [
+          {
+            "items": "voidbreak:lumen_log_blue"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_lumen_wood_blue": {
+      "conditions": {
+        "items": [
+          {
+            "items": "voidbreak:lumen_wood_blue"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stripped_lumen_log_blue": {
+      "conditions": {
+        "items": [
+          {
+            "items": "voidbreak:stripped_lumen_log_blue"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stripped_lumen_wood_blue": {
+      "conditions": {
+        "items": [
+          {
+            "items": "voidbreak:stripped_lumen_wood_blue"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "voidbreak:lumen_planks_blue"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lumen_log_blue",
+      "has_stripped_lumen_log_blue",
+      "has_lumen_wood_blue",
+      "has_stripped_lumen_wood_blue"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "voidbreak:lumen_planks_blue"
+    ]
+  }
+}

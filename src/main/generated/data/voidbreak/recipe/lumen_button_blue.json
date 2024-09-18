@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "voidbreak:lumen_planks_blue"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "voidbreak:lumen_button_blue"
+  }
+}

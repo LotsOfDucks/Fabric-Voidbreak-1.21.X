@@ -13,8 +13,6 @@ public class ModItems {
     public static final Item VOIDROOT_SPROUT = registerItem("voidroot_sprout", new AliasedBlockItem(ModBlocks.VOIDROOT, new Item.Settings()));
     public static final Item VOID_BOTTLE = registerItem("void_bottle", new Item(new Item.Settings().maxCount(16)));
     public static final Item CHALK_DUST = registerItem("chalk_dust", new Item(new Item.Settings()));
-    public static final Item LUMEN_SIGN_BLUE = registerItem("lumen_sign_blue", new SignItem(new Item.Settings().maxCount(16),ModBlocks.LUMEN_SIGN_BLUE,ModBlocks.LUMEN_WALL_SIGN_BLUE));
-    public static final Item LUMEN_HANGING_SIGN_BLUE = registerItem("lumen_hanging_sign_blue", new HangingSignItem(ModBlocks.LUMEN_HANGING_SIGN_BLUE,ModBlocks.LUMEN_WALL_HANGING_SIGN_BLUE,new Item.Settings().maxCount(16)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Voidbreak.MOD_ID, name), item);

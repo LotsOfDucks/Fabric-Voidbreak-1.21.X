@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "voidbreak:lumen_planks_blue"
+    }
+  },
+  "pattern": [
+    "STS",
+    "STS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "voidbreak:lumen_fence_gate_blue"
+  }
+}

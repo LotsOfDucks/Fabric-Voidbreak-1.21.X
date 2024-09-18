@@ -1,7 +1,6 @@
 package com.lotsofducks.voidbreak.datagen;
 
 import com.lotsofducks.voidbreak.block.ModBlocks;
-import com.lotsofducks.voidbreak.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -19,9 +18,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.FENCE_GATES)
                 .add(ModBlocks.LUMEN_FENCE_GATE_BLUE.asItem());
 
-        getOrCreateTagBuilder(ItemTags.HANGING_SIGNS)
-                .add(ModItems.LUMEN_HANGING_SIGN_BLUE);
-
         getOrCreateTagBuilder(ItemTags.LEAVES)
                 .add(ModBlocks.LUMEN_LEAVES_BLUE.asItem());
 
@@ -36,9 +32,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.SAPLINGS)
                 .add(ModBlocks.LUMEN_SAPLING_BLUE.asItem());
-
-        getOrCreateTagBuilder(ItemTags.SIGNS)
-                .add(ModItems.LUMEN_SIGN_BLUE);
 
         getOrCreateTagBuilder(ItemTags.WOODEN_BUTTONS)
                 .add(ModBlocks.LUMEN_BUTTON_BLUE.asItem());

@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lumen_planks_blue": {
+      "conditions": {
+        "items": [
+          {
+            "items": "voidbreak:lumen_planks_blue"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:stick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "voidbreak:lumen_fence_gate_blue"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lumen_planks_blue",
+      "has_stick"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "voidbreak:lumen_fence_gate_blue"
+    ]
+  }
+}

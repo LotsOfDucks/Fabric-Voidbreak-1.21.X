@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "T": {
+      "item": "voidbreak:lumen_planks_blue"
+    }
+  },
+  "pattern": [
+    "TTT"
+  ],
+  "result": {
+    "count": 6,
+    "id": "voidbreak:lumen_slab_blue"
+  }
+}

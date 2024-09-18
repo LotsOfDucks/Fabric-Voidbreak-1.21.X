@@ -26,8 +26,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CHALKY_DIRT)
                 .add(ModBlocks.CHALKY_GRASS);
 
-        getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS)
-                .add(ModBlocks.LUMEN_HANGING_SIGN_BLUE);
 
         getOrCreateTagBuilder(BlockTags.CROPS)
                 .add(ModBlocks.VOIDROOT);
@@ -53,15 +51,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.SAPLINGS)
                 .add(ModBlocks.LUMEN_SAPLING_BLUE);
-
-        getOrCreateTagBuilder(BlockTags.STANDING_SIGNS)
-                .add(ModBlocks.LUMEN_SIGN_BLUE);
-
-        getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS)
-                .add(ModBlocks.LUMEN_WALL_HANGING_SIGN_BLUE);
-
-        getOrCreateTagBuilder(BlockTags.WALL_SIGNS)
-                .add(ModBlocks.LUMEN_WALL_SIGN_BLUE);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
                 .add(ModBlocks.LUMEN_BUTTON_BLUE);

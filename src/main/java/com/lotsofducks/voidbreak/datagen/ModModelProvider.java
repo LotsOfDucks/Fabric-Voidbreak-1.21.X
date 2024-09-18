@@ -27,13 +27,12 @@ public class ModModelProvider extends FabricModelProvider {
                 .wood(ModBlocks.STRIPPED_LUMEN_WOOD_BLUE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LUMEN_LEAVES_BLUE);
         blockStateModelGenerator.registerTintableCross(ModBlocks.LUMEN_SAPLING_BLUE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerHangingSign(ModBlocks.STRIPPED_LUMEN_LOG_BLUE, ModBlocks.LUMEN_HANGING_SIGN_BLUE, ModBlocks.LUMEN_WALL_HANGING_SIGN_BLUE);
 
         var lumenFamilyBlue = new BlockFamily.Builder(ModBlocks.LUMEN_PLANKS_BLUE)
                 .button(ModBlocks.LUMEN_BUTTON_BLUE)
+                .pressurePlate(ModBlocks.LUMEN_PRESSURE_PLATE_BLUE)
                 .fence(ModBlocks.LUMEN_FENCE_BLUE)
                 .fenceGate(ModBlocks.LUMEN_FENCE_GATE_BLUE)
-                .sign(ModBlocks.LUMEN_SIGN_BLUE, ModBlocks.LUMEN_WALL_SIGN_BLUE)
                 .slab(ModBlocks.LUMEN_SLAB_BLUE)
                 .stairs(ModBlocks.LUMEN_STAIRS_BLUE)
                 .door(ModBlocks.LUMEN_DOOR_BLUE)

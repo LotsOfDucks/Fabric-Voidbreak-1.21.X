@@ -177,9 +177,7 @@ public class ModBlocks {
     public static final Block LUMEN_STAIRS_BLUE = registerBlock("lumen_stairs_blue",
             new StairsBlock(LUMEN_PLANKS_BLUE.getDefaultState(), AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)
                     .mapColor(LUMEN_PLANKS_BLUE.getDefaultMapColor())
-                    .luminance((state) -> {
-                        return 10;
-                    })));
+                    .luminance((state) -> 10)));
 
     public static final Block LUMEN_SLAB_BLUE = registerBlock("lumen_slab_blue",
             new SlabBlock(AbstractBlock.Settings.create()
@@ -201,7 +199,7 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY)
                     .luminance((state) -> 10)));
 
-    public static final Block LUMEN_BUTTON_BLUE = registerBlock("lumen_pressure_plate_blue",
+    public static final Block LUMEN_BUTTON_BLUE = registerBlock("lumen_button_blue",
             Blocks.createWoodenButtonBlock(ModBlockSetTypes.LUMEN_BLUE));
 
     public static final Block LUMEN_TRAPDOOR_BLUE = registerBlock("lumen_trapdoor_blue",
@@ -212,49 +210,6 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.BASS)
                     .burnable()
                     .allowsSpawning(Blocks::never)
-                    .luminance((state) -> 10)));
-
-    public static final Block LUMEN_SIGN_BLUE = registerBlock("lumen_sign_blue",
-            new SignBlock(WoodType.OAK, AbstractBlock.Settings.create()
-                    .mapColor(LUMEN_PLANKS_BLUE.getDefaultMapColor())
-                    .solid()
-                    .instrument(NoteBlockInstrument.BASS)
-                    .noCollision()
-                    .strength(1.0F)
-                    .burnable()
-                    .luminance((state) -> 10)));
-
-    public static final Block LUMEN_WALL_SIGN_BLUE = registerBlock("lumen_wall_sign_blue",
-            new WallSignBlock(ModWoodTypes.LUMEN_BLUE, AbstractBlock.Settings.create()
-                    .mapColor(LUMEN_PLANKS_BLUE.getDefaultMapColor())
-                    .solid()
-                    .instrument(NoteBlockInstrument.BASS)
-                    .noCollision()
-                    .strength(1.0F)
-                    .dropsLike(LUMEN_SIGN_BLUE)
-                    .burnable()
-                    .luminance((state) -> 10)));
-
-    public static final Block LUMEN_HANGING_SIGN_BLUE = registerBlock("lumen_hanging_sign_blue",
-            new HangingSignBlock(ModWoodTypes.LUMEN_BLUE, AbstractBlock.Settings.create()
-                    .mapColor(LUMEN_PLANKS_BLUE.getDefaultMapColor())
-                    .solid()
-                    .instrument(NoteBlockInstrument.BASS)
-                    .noCollision()
-                    .strength(1.0F)
-                    .dropsLike(LUMEN_SIGN_BLUE)
-                    .burnable()
-                    .luminance((state) -> 10)));
-
-    public static final Block LUMEN_WALL_HANGING_SIGN_BLUE = registerBlock("lumen_wall_hanging_sign_blue",
-            new WallHangingSignBlock(ModWoodTypes.LUMEN_BLUE, AbstractBlock.Settings.create()
-                    .mapColor(LUMEN_PLANKS_BLUE.getDefaultMapColor())
-                    .solid()
-                    .instrument(NoteBlockInstrument.BASS)
-                    .noCollision()
-                    .strength(1.0F)
-                    .dropsLike(LUMEN_SIGN_BLUE)
-                    .burnable()
                     .luminance((state) -> 10)));
 
     public static final Block VOIDROOT = registerBlock("voidroot",

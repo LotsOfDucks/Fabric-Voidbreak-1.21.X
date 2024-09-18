@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "voidbreak:lumen_sign_blue"
+          "name": "voidbreak:lumen_button_blue"
         }
       ],
       "rolls": 1.0

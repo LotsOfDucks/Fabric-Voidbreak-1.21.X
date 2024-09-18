@@ -20,8 +20,6 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.TEST_ITEM);
                         entries.add(ModItems.VOID_BOTTLE);
-                        entries.add(ModItems.LUMEN_SIGN_BLUE);
-                        entries.add(ModItems.LUMEN_HANGING_SIGN_BLUE);
                     }).build());
 
     public static final ItemGroup VOIDBREAK_NATURAL_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -42,6 +40,16 @@ public class ModItemGroups {
                         entries.add(ModBlocks.LUMEN_WOOD_BLUE);
                         entries.add(ModBlocks.STRIPPED_LUMEN_WOOD_BLUE);
                         entries.add(ModBlocks.LUMEN_LEAVES_BLUE);
+                        entries.add(ModBlocks.LUMEN_PLANKS_BLUE);
+                        entries.add(ModBlocks.LUMEN_PRESSURE_PLATE_BLUE);
+                        entries.add(ModBlocks.LUMEN_BUTTON_BLUE);
+                        entries.add(ModBlocks.LUMEN_FENCE_BLUE);
+                        entries.add(ModBlocks.LUMEN_FENCE_GATE_BLUE);
+                        entries.add(ModBlocks.LUMEN_SLAB_BLUE);
+                        entries.add(ModBlocks.LUMEN_STAIRS_BLUE);
+                        entries.add(ModBlocks.LUMEN_SAPLING_BLUE);
+                        entries.add(ModBlocks.LUMEN_DOOR_BLUE);
+                        entries.add(ModBlocks.LUMEN_TRAPDOOR_BLUE);
                         entries.add(ModItems.VOIDROOT_SPROUT);
                     }).build());
 
