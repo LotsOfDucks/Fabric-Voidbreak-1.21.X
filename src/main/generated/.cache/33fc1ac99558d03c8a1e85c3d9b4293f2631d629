@@ -1,0 +1,18 @@
+// 1.21.1	2024-09-17T17:30:03.3044331	Voidbreak/Tags for minecraft:block
+d286ddf3f9c18b76d65878501a2b3abec540b838 data\minecraft\tags\block\standing_signs.json
+5514f94b12139607857a4c85abede3a010905f49 data\minecraft\tags\block\wall_hanging_signs.json
+202940aad7155eedd9c7e1e3e929fd349940e908 data\minecraft\tags\block\leaves.json
+e50cf0f66425c89add92e333dbc31c37c7d54ef0 data\minecraft\tags\block\wooden_doors.json
+2dfac1597a7f7b73a7759bbc29868ca7c019ef21 data\minecraft\tags\block\wooden_buttons.json
+5b50c58997db2d16c7a3d8391765d11e08cf607e data\minecraft\tags\block\dirt.json
+30b057c7db0c5fc701793e91fab5baed454ddd2b data\minecraft\tags\block\saplings.json
+8ffd4722a4638ea7e1b44d7dee0b555a249ef750 data\minecraft\tags\block\crops.json
+2dfac1597a7f7b73a7759bbc29868ca7c019ef21 data\minecraft\tags\block\wooden_pressure_plates.json
+98982adee9d5b7c02fc4f3aa491a5ebc84181453 data\minecraft\tags\block\wooden_stairs.json
+79b5ed7726b6b2e494a288ccb7f9c70545c18066 data\minecraft\tags\block\wooden_fences.json
+5d5bae573bf598840c43ffb3750ca020b16bb5ff data\voidbreak\tags\block\lumen_logs_blue.json
+4f5ff8b031c050e3e223c64e9b52407c3b17613c data\minecraft\tags\block\wall_signs.json
+2dcfdc67e02e40cea3ddc640e918b3f61d8cbc39 data\minecraft\tags\block\mineable\pickaxe.json
+5d5bae573bf598840c43ffb3750ca020b16bb5ff data\minecraft\tags\block\logs_that_burn.json
+2965d3cd4f6078024a64c08eacf4ac9a0c9bf99b data\minecraft\tags\block\wooden_slabs.json
+5b50c58997db2d16c7a3d8391765d11e08cf607e data\minecraft\tags\block\mineable\shovel.json
