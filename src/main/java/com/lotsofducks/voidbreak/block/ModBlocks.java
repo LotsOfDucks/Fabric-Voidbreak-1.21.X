@@ -3,6 +3,7 @@ package com.lotsofducks.voidbreak.block;
 import com.lotsofducks.voidbreak.Voidbreak;
 import com.lotsofducks.voidbreak.block.custom.*;
 import com.lotsofducks.voidbreak.item.ModItems;
+import com.lotsofducks.voidbreak.worldgen.ModConfiguredFeatures;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
@@ -17,6 +18,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import org.apache.http.impl.client.NullBackoffStrategy;
 
+import java.util.Optional;
 import java.util.function.ToIntFunction;
 
 public class ModBlocks {
@@ -128,7 +130,18 @@ public class ModBlocks {
             ModBlocks.createModLeavesBlock(BlockSoundGroup.GRASS,MapColor.LIGHT_BLUE, 13));
 
     public static final Block LUMEN_SAPLING_BLUE = registerBlock("lumen_sapling_blue",
-            new SaplingBlock(SaplingGenerator.OAK, AbstractBlock.Settings.create()
+            new SaplingBlock(
+                    new SaplingGenerator(
+                            Identifier.of(Voidbreak.MOD_ID).toString(),
+                            0.1F,
+                            Optional.empty(),
+                            Optional.empty(),
+                            Optional.of(ModConfiguredFeatures.LUMEN_BLUE_KEY),
+                            Optional.empty(),
+                            Optional.empty(),
+                            Optional.empty()
+                    ),
+                    AbstractBlock.Settings.create()
                     .mapColor(MapColor.BLUE)
                     .ticksRandomly()
                     .strength(0.0F)
