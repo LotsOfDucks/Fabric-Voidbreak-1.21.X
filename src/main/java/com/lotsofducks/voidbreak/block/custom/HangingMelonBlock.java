@@ -1,30 +1,48 @@
 package com.lotsofducks.voidbreak.block.custom;
 
 
+import com.lotsofducks.voidbreak.Voidbreak;
 import com.lotsofducks.voidbreak.block.ModBlocks;
+import com.lotsofducks.voidbreak.entity.damage.ModDamageSources;
+import com.lotsofducks.voidbreak.entity.damage.ModDamageTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.LandingBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.FallingBlockEntity;
+import net.minecraft.entity.damage.*;
 import net.minecraft.entity.mob.RavagerEntity;
+import net.minecraft.predicate.entity.EntityPredicates;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.*;
 
+import java.util.function.Predicate;
+
 import static net.minecraft.block.FallingBlock.canFallThrough;
 
-public class HangingMelonBlock extends CeilingStemBlock{
+public class HangingMelonBlock extends CeilingStemBlock {
 
     public static final int MAX_AGE = 3;
     public static final IntProperty AGE;
     private static final VoxelShape[] AGE_TO_SHAPE;
+    private static final float FALLING_BLOCK_ENTITY_DAMAGE_MULTIPLIER = 1.0F;
+    private static final int FALLING_BLOCK_ENTITY_MAX_DAMAGE = 10;
     static {
         AGE = Properties.AGE_3;
         AGE_TO_SHAPE = new VoxelShape[]{
@@ -117,7 +135,11 @@ public class HangingMelonBlock extends CeilingStemBlock{
     }
 
     protected void configureFallingBlockEntity(FallingBlockEntity entity) {
+        entity.setHurtEntities(1.0F, 20);
+        entity.handleFallDamage(1.0F,20F, );
     }
+
+
 
     protected int getFallDelay() {
         return 2;

@@ -1,4 +1,7 @@
 {
+  "death.attack.fallingMelon": "%1$s was domed by a falling gourd.",
+  "death.attack.fallingMelon.player": "%1$s/'s fight against %2$s was interrupted by a falling gourd.",
+
   "item.voidbreak.test_item": "Test Item",
   "item.voidbreak.voidroot_sprout": "Voidroot Sprout",
   "item.voidbreak.lumei_bud": "Lumei Bud",

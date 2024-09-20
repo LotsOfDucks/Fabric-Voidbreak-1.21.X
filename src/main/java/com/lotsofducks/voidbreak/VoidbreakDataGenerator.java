@@ -1,6 +1,7 @@
 package com.lotsofducks.voidbreak;
 
 import com.lotsofducks.voidbreak.datagen.*;
+import com.lotsofducks.voidbreak.entity.damage.ModDamageTypes;
 import com.lotsofducks.voidbreak.worldgen.ModConfiguredFeatures;
 import com.lotsofducks.voidbreak.worldgen.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -27,5 +28,6 @@ public class VoidbreakDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::boostrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::boostrap);
+		registryBuilder.addRegistry(RegistryKeys.DAMAGE_TYPE, ModDamageTypes::bootstrap);
 	}
 }
