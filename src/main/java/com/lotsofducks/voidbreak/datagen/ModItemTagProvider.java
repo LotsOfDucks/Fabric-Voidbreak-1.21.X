@@ -1,8 +1,12 @@
 package com.lotsofducks.voidbreak.datagen;
 
 import com.lotsofducks.voidbreak.block.ModBlocks;
+import com.lotsofducks.voidbreak.block.ModTags;
+import com.lotsofducks.voidbreak.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 
@@ -15,6 +19,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        getOrCreateTagBuilder(ModTags.Items.URCHIN_FOOD)
+                .add(Blocks.GLOW_LICHEN.asItem());
         getOrCreateTagBuilder(ItemTags.FENCE_GATES)
                 .add(ModBlocks.LUMEN_FENCE_GATE_BLUE.asItem());
 

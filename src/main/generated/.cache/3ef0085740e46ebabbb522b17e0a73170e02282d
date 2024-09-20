@@ -1,9 +1,10 @@
-// 1.21.1	2024-09-19T23:10:54.3367476	Voidbreak/Tags for minecraft:item
+// 1.21.1	2024-09-20T12:49:37.0449708	Voidbreak/Tags for minecraft:item
 202940aad7155eedd9c7e1e3e929fd349940e908 data\minecraft\tags\item\leaves.json
 2dfac1597a7f7b73a7759bbc29868ca7c019ef21 data\minecraft\tags\item\wooden_pressure_plates.json
 4a37a564577e2a12c34447e6f65e5ba464a64e73 data\minecraft\tags\item\planks.json
 8b50c4fd31e08cfddfed69d9276702c3bb1d96cc data\minecraft\tags\item\wooden_trapdoors.json
 8197f33a3b3cc1694b5fa7989b500464b2f886f2 data\minecraft\tags\item\fence_gates.json
+81db4915f4f80c962cdeb4281b6ee49cff4bea7d data\voidbreak\tags\item\urchin_food.json
 320d203baf65e5fa1cacfb24c201fcc221090256 data\minecraft\tags\item\wooden_buttons.json
 2965d3cd4f6078024a64c08eacf4ac9a0c9bf99b data\minecraft\tags\item\wooden_slabs.json
 5d5bae573bf598840c43ffb3750ca020b16bb5ff data\minecraft\tags\item\logs_that_burn.json
