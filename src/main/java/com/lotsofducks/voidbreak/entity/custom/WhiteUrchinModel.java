@@ -6,9 +6,12 @@ import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 
 public class WhiteUrchinModel extends EntityModel<WhiteUrchin> {
+    private final ModelPart root;
     private final ModelPart base;
     public WhiteUrchinModel(ModelPart root) {
+        this.root = root;
         this.base = root.getChild("base");
+
     }
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
@@ -117,6 +120,9 @@ public class WhiteUrchinModel extends EntityModel<WhiteUrchin> {
     }
     @Override
     public void render(MatrixStack matrices, VertexConsumer vertex, int light, int overlay, int color) {
-        base.render(matrices, vertex, light, overlay, color);
+        this.getPart().render(matrices, vertex, light, overlay, color);
+    }
+    public ModelPart getPart() {
+        return this.root;
     }
 }

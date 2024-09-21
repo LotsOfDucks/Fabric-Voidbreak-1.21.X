@@ -1,5 +1,7 @@
 package com.lotsofducks.voidbreak.entity.custom;
 
+import com.lotsofducks.voidbreak.Voidbreak;
+import com.lotsofducks.voidbreak.block.ModBlocks;
 import com.lotsofducks.voidbreak.block.ModTags;
 import com.lotsofducks.voidbreak.entity.ai.goal.custom.EatLichenGoal;
 import net.minecraft.entity.EntityData;
@@ -20,9 +22,11 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
 public class WhiteUrchin extends AnimalEntity {
@@ -40,15 +44,22 @@ public class WhiteUrchin extends AnimalEntity {
         super.tick();
     }
 
+
     public void onPlayerCollision(PlayerEntity player) {
-        if (player instanceof ServerPlayerEntity && player.canTakeDamage()) {
-            if (player.hurtTime == 0) {
-                player.damage(this.getDamageSources().sting(this), 1);
-                player.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 60, 0), this);
+        if (player instanceof ServerPlayerEntity && player.canTakeDamage() && !player.isInSneakingPose()) {
+            if (player.hurtTime == 0 && player.fallDistance < 1) {
+                player.damage(this.getDamageSources().mobAttack(this), 1);
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 80, 0), this);
                 this.playSound(SoundEvents.ENTITY_SHULKER_OPEN, 1.0F, 5.0F);
             }
         }
+        if (player.fallDistance >= 1) {
+            player.handleFallDamage(fallDistance + 4.0F, 2.0F, this.getDamageSources().sting(this));
+            this.playSound(SoundEvents.ENTITY_SHULKER_OPEN, 1.0F, 5.0F);
+        }
     }
+
+
 
     public boolean isCollidable() {
         return this.isAlive();
@@ -83,6 +94,10 @@ public class WhiteUrchin extends AnimalEntity {
         super.tickMovement();
     }
 
+    public float getPathfindingFavor(BlockPos pos, WorldView world) {
+        return world.getBlockState(pos.down()).isOf(ModBlocks.CHALKY_GRASS) ? 10.0F : world.getPhototaxisFavor(pos);
+    }
+
     public void handleStatus(byte status) {
         if (status == 10) {
             this.eatLichenTimer = 40;
@@ -100,15 +115,23 @@ public class WhiteUrchin extends AnimalEntity {
         return SoundEvents.BLOCK_PACKED_MUD_BREAK;
     }
 
-
-
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return false;
+        return stack.isIn(ModTags.Items.URCHIN_FOOD);
     }
 
-    public @Nullable WhiteUrchin createChild(ServerWorld world, PassiveEntity entity) {
-        return null;
+    public void breed(ServerWorld world, AnimalEntity other) {
+        PassiveEntity passiveEntity = this.createChild(world, other);
+        if (passiveEntity != null) {
+            passiveEntity.setBaby(true);
+            passiveEntity.refreshPositionAndAngles(this.getX(), this.getY(), this.getZ(), 0.0F, 0.0F);
+            this.breed(world, other, passiveEntity);
+            world.spawnEntityAndPassengers(passiveEntity);
+        }
+    }
+
+    public @Nullable WhiteUrchin createChild(ServerWorld world, PassiveEntity passiveEntity) {
+        return Voidbreak.WHITE_URCHIN.create(world);
     }
 
     @Nullable
