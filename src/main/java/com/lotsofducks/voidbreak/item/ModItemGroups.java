@@ -20,6 +20,7 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.TEST_ITEM);
                         entries.add(ModItems.VOID_BOTTLE);
+                        entries.add(ModItems.WHITE_URCHIN_SPAWN_EGG);
                     }).build());
 
     public static final ItemGroup VOIDBREAK_NATURAL_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,

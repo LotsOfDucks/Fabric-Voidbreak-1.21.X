@@ -59,8 +59,6 @@ public class WhiteUrchin extends AnimalEntity {
         }
     }
 
-
-
     public boolean isCollidable() {
         return this.isAlive();
     }

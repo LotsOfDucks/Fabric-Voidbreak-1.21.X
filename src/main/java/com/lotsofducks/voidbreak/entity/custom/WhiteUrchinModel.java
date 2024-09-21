@@ -4,6 +4,7 @@ import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.math.MathHelper;
 
 public class WhiteUrchinModel extends EntityModel<WhiteUrchin> {
     private final ModelPart root;
@@ -116,7 +117,10 @@ public class WhiteUrchinModel extends EntityModel<WhiteUrchin> {
         return TexturedModelData.of(modelData, 64, 32);
     }
     @Override
-    public void setAngles(WhiteUrchin entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+    public void setAngles(WhiteUrchin entity, float a, float b, float c, float d, float e) {
+        b = Math.min(0.25F, b);
+        this.base.roll = 0.1F * MathHelper.sin(a * 1.5F) * 4.0F * b;
+        this.base.yaw = 0.1F * MathHelper.sin(a * 1.5F) * 2.0F * b;
     }
     @Override
     public void render(MatrixStack matrices, VertexConsumer vertex, int light, int overlay, int color) {
