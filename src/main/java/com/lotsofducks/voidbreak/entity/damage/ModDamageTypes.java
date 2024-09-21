@@ -13,6 +13,8 @@ import net.minecraft.world.World;
 public class ModDamageTypes  {
 
         public static final RegistryKey<DamageType> FALLING_MELON = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(Voidbreak.MOD_ID, "falling_melon"));
+        public static final RegistryKey<DamageType> URCHIN_PRICK = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(Voidbreak.MOD_ID, "urchin_prick"));
+    public static final RegistryKey<DamageType> FALL_ON_URCHIN = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(Voidbreak.MOD_ID, "fall_on_urchin"));
 
         public static DamageSource of(Entity entity, RegistryKey<DamageType> key) {
             return new DamageSource(entity.getRegistryManager().get(RegistryKeys.DAMAGE_TYPE).entryOf(key));

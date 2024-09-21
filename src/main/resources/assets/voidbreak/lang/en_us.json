@@ -1,6 +1,10 @@
 {
   "death.attack.fallingMelon": "%1$s was domed by a falling gourd.",
-  "death.attack.fallingMelon.player": "%1$s/'s fight against %2$s was interrupted by a falling gourd.",
+  "death.attack.fallingMelon.player": "%1$s's fight against %2$s was interrupted by a falling gourd.",
+  "death.attack.fallOnUrchin": "%1$s's fall was not cushioned.",
+  "death.attack.fallOnUrchin.player": "%1$s was pushed into a White Urchin by %2$s.",
+  "death.attack.urchinPrick": "%1$s became a pincushion.",
+  "death.attack.urchinPrick.player": "%1$s tripped onto a White Urchin while fighting %2$s.",
 
   "item.voidbreak.test_item": "Test Item",
   "item.voidbreak.voidroot_sprout": "Voidroot Sprout",
