@@ -1,13 +1,18 @@
 package com.lotsofducks.voidbreak.block.custom;
 
 
+import com.lotsofducks.voidbreak.Voidbreak;
 import com.lotsofducks.voidbreak.block.ModBlocks;
+import com.lotsofducks.voidbreak.entity.damage.ModDamageTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.LandingBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.FallingBlockEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.RavagerEntity;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
@@ -20,7 +25,7 @@ import net.minecraft.world.*;
 
 import static net.minecraft.block.FallingBlock.canFallThrough;
 
-public class HangingMelonBlock extends CeilingStemBlock {
+public class HangingMelonBlock extends CeilingStemBlock implements LandingBlock {
 
     public static final int MAX_AGE = 3;
     public static final IntProperty AGE;
